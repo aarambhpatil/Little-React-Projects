@@ -6,13 +6,11 @@ function App() {
   const [error, setError] = useState(false);
 
   const passwordChange = (password) => {
-    console.log(password);
     validate(password);
     setPassword(password);
   };
 
   const validate = (password) => {
-    console.log(password);
     if (
       validator.isStrongPassword(password, {
         minLength: 8,
@@ -34,7 +32,8 @@ function App() {
         <h1 className="">Enter a Password</h1>
         <input
           type="password"
-          className="bg-white w-100"
+          placeholder="Password@123"
+          className="bg-white border-solid border-color-black border-1 w-100 "
           onChange={(e) => {
             passwordChange(e.target.value);
           }}
@@ -45,9 +44,9 @@ function App() {
           <span className="text-red-500 text-center">Weak Password</span>
         )}
         {error ? (
-          <button type="submit">Save Password</button>
+          <button type="submit" className="bg-white px-5">Save Password</button>
         ) : (
-          <button type="submit" className="disabled cursor-not-allowed">
+          <button type="submit" className="bg-white cursor-not-allowed px-5">
             Save Password
           </button>
         )}
