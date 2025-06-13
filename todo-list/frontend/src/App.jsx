@@ -55,7 +55,7 @@ function App() {
         </div>
         <div className="h-1 w-3/4 bg-black"></div>
         <div className="flex flex-row flex-wrap w-full items-center justify-center">
-          {currentList.length != 0 ? (
+          {currentList && currentList.length != 0 ? (
             <>
               {currentList.map((ele, index) => (
                 <div key={`${index}div`} className="p-3">
