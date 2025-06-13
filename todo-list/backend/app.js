@@ -46,8 +46,8 @@ app.post("/deleteList", (req, res) => {
     return res.status(404).json({ message: "No Task Sent" });
   }
   const { task } = req.body
-  conSQL.query(`DELETE from TaskList WHERE task="${task}"`, (error, results, fields) => {
-    
+  conSQL.query(`DELETE from TaskList WHERE TaskList="${task.task}"`, (error, results, fields) => {
+    if (error) throw error
   })
 })
 
