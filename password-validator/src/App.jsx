@@ -32,6 +32,7 @@ function App() {
         <h1 className="">Enter a Password</h1>
         <input
           type="password"
+          value={password}
           placeholder="Password@123"
           className="bg-white border-solid border-color-black border-1 w-100 "
           onChange={(e) => {
